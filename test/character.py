@@ -1,6 +1,3 @@
-import pytest
-
-from config.exceptions import TypeOfAttackNotFound
 from game.character import Character
 
 TEST_TYPE_OF_ATTACKS = {
@@ -33,8 +30,9 @@ class TestCharacter:
         assert result == expected
 
         type_of_attack = ("DDD", "P")
-        with pytest.raises(TypeOfAttackNotFound):
-            character.attack(type_of_attack)
+        expected = {'damage': 1, 'name': 'Puño'}
+        result = character.attack(type_of_attack)
+        assert result == expected
 
     def test_receive_damage(self):
         character = Character("Juan", 7, TEST_TYPE_OF_ATTACKS)

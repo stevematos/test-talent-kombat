@@ -13,5 +13,5 @@ class GamePlayers(BaseModel):
 
 @router.post("/start")
 async def start(game_players: GamePlayers):
-    start_game(game_players.player_movements)
-    return {"message": "Admin getting schwifty"}
+    messages = start_game(game_players.player_movements)
+    return {'narration': messages}
