@@ -1,4 +1,4 @@
-from game.character import Character
+from classes.character import Character
 from utils.general import join_tuple_of_tuple, join_value_of_tuple
 
 

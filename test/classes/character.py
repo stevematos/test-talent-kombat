@@ -1,4 +1,5 @@
-from game.character import Character
+import pytest
+from classes.character import Character
 
 TEST_TYPE_OF_ATTACKS = {
     ("DSS", "P"): {
@@ -15,21 +16,17 @@ TEST_TYPE_OF_ATTACKS = {
 
 
 class TestCharacter:
-    def test_attack(self):
+
+    @pytest.mark.parametrize(
+        ("type_of_attack", "expected"),
+        (
+                (("DSS", "P"), {'damage': 3, 'message': 'usa un Taladoken', 'name': 'Taladoken'}),
+                (("", "P"), {'damage': 1, 'message': 'le da un puñetazo', 'name': 'Punch'}),
+                (("DDD", "P"), {'damage': 1, 'message': 'se mueve y le da un puñetazo', 'name': 'Punch'})
+        ),
+    )
+    def test_attack(self, type_of_attack, expected):
         character = Character("Steve", 7, TEST_TYPE_OF_ATTACKS)
-
-        type_of_attack = ("DSS", "P")
-        expected = {'damage': 3, 'message': 'usa un Taladoken', 'name': 'Taladoken'}
-        result = character.attack(type_of_attack)
-        assert result == expected
-
-        type_of_attack = ("", "P")
-        expected = {'damage': 1, 'message': 'le da un puñetazo', 'name': 'Punch'}
-        result = character.attack(type_of_attack)
-        assert result == expected
-
-        type_of_attack = ("DDD", "P")
-        expected = {'damage': 1, 'message': 'se mueve y le da un puñetazo', 'name': 'Punch'}
         result = character.attack(type_of_attack)
         assert result == expected
 

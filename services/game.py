@@ -1,5 +1,5 @@
 from config.constants import DEFAULT_POINTS_OF_LIFE, PLAYER_1_TYPE_OF_ATTACKS, PLAYER_2_TYPE_OF_ATTACKS
-from game.character import Character
+from classes.character import Character
 from utils.game import get_message_final, get_order_player
 from utils.general import merge_list
 
@@ -7,8 +7,8 @@ from utils.general import merge_list
 def _execute_actions(
     first_player: Character,
     second_player: Character,
-    first_player_actions: tuple[str, str],
-    second_player_actions:  tuple[str, str],
+    first_player_actions: tuple,
+    second_player_actions:  tuple,
 ) -> list[str]:
     len_first_player_actions = len(first_player_actions)
     len_second_player_actions = len(second_player_actions)
