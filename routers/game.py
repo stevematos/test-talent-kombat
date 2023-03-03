@@ -8,10 +8,10 @@ router = APIRouter()
 
 
 class GamePlayers(BaseModel):
-    player_movements: dict[str, dict[str, list]]
+    player_actions: dict[str, dict[str, list]]
 
 
 @router.post("/start")
 async def start(game_players: GamePlayers):
-    messages = start_game(game_players.player_movements)
+    messages = start_game(game_players.player_actions)
     return {'narration': messages}
