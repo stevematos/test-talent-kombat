@@ -1,15 +1,22 @@
 DEFAULT_POINTS_OF_LIFE = 6
 
-DEFAULT_MOVE = {"name": "Se mueve pero no ataca", "damage": 0}
+DEFAULT_MOVE = {
+    "damage": 0,
+    "name": "Move",
+    "message": "se mueve",
+}
+
 
 DEFAULT_GENERAL_ATTACKS = {
     "P": {
         "damage": 1,
-        "name": "Puño"
+        "name": "Punch",
+        "message": "le da un puñetazo",
     },
     "K": {
         "damage": 1,
-        "name": "Patada"
+        "name": "Kick",
+        "message": "le da una patada",
     },
 }
 
@@ -17,30 +24,26 @@ DEFAULT_GENERAL_ATTACKS = {
 PLAYER_1_TYPE_OF_ATTACKS = {
     ("DSD", "P"): {
         "damage": 3,
-        "name": "Taladoken"
+        "name": "Taladoken",
+        "message": "usa un Taladoken",
     },
     ("SD", "K"): {
         "damage": 2,
-        "name": "Remuyuken"
+        "name": "Remuyuken",
+        "message": "conecta un Remuyuken",
     },
 }
 
 
 PLAYER_2_TYPE_OF_ATTACKS = {
-    ("SA", "K"): {
-        "damage": 3,
-        "name": "Taladoken"
-    },
     ("ASA", "P"): {
+        "damage": 3,
+        "name": "Taladoken",
+        "message": "usa un Taladoken",
+    },
+    ("SA", "K"): {
         "damage": 2,
-        "name": "Remuyuken"
-    },
-    ("", "P"): {
-        "damage": 1,
-        "name": "Puño"
-    },
-    ("", "K"): {
-        "damage": 1,
-        "name": "Patada"
+        "name": "Remuyuken",
+        "message": "conecta un Remuyuken",
     },
 }

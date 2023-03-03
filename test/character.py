@@ -3,19 +3,13 @@ from game.character import Character
 TEST_TYPE_OF_ATTACKS = {
     ("DSS", "P"): {
         "damage": 3,
-        "name": "Taladoken"
+        "name": "Taladoken",
+        "message": "usa un Taladoken",
     },
     ("SD", "K"): {
         "damage": 2,
-        "name": "Remuyuken"
-    },
-    ("", "P"): {
-        "damage": 1,
-        "name": "Puño"
-    },
-    ("", "K"): {
-        "damage": 1,
-        "name": "Patada"
+        "name": "Remuyuken",
+        "message": "conecta un Remuyuken",
     },
 }
 
@@ -25,12 +19,17 @@ class TestCharacter:
         character = Character("Steve", 7, TEST_TYPE_OF_ATTACKS)
 
         type_of_attack = ("DSS", "P")
-        expected = {'damage': 3, 'name': 'Taladoken'}
+        expected = {'damage': 3, 'message': 'usa un Taladoken', 'name': 'Taladoken'}
+        result = character.attack(type_of_attack)
+        assert result == expected
+
+        type_of_attack = ("", "P")
+        expected = {'damage': 1, 'message': 'le da un puñetazo', 'name': 'Punch'}
         result = character.attack(type_of_attack)
         assert result == expected
 
         type_of_attack = ("DDD", "P")
-        expected = {'damage': 1, 'name': 'Puño'}
+        expected = {'damage': 1, 'message': 'se mueve y le da un puñetazo', 'name': 'Punch'}
         result = character.attack(type_of_attack)
         assert result == expected
 
