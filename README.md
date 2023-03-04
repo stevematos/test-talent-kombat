@@ -43,6 +43,7 @@ test_kuantaz
 │   │   .env.docker
 │   │   .env.test
 │   │   Dockerfile
+│   │   .dockerignore
 │   │   requirements.txt
 │   │   requirements-docker.txt
 │   │
