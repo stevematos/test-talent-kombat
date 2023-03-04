@@ -1,4 +1,4 @@
-# Test Kuantaz
+# Test Talent Kombat
 
 ## Description
 ---
