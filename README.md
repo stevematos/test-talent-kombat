@@ -45,7 +45,6 @@ test_kuantaz
 │   │   Dockerfile
 │   │   requirements.txt
 │   │   requirements-docker.txt
-│   │   .dockerignore
 │   │
 │   │   main.py
 │   │
