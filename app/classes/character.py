@@ -4,8 +4,13 @@ from config.constants import DEFAULT_GENERAL_ATTACKS, DEFAULT_MOVE
 
 
 class Character:
-
-    def __init__(self, name: str, life_point: int, type_of_attacks: dict[tuple, dict[str, str | int]], general_attacks:  dict[str, dict[str, str | int]] = DEFAULT_GENERAL_ATTACKS):
+    def __init__(
+        self,
+        name: str,
+        life_point: int,
+        type_of_attacks: dict[tuple, dict[str, str | int]],
+        general_attacks: dict[str, dict[str, str | int]] = DEFAULT_GENERAL_ATTACKS,
+    ):
         self.name = name
         self.life_point = life_point
         self._type_of_attacks = type_of_attacks
@@ -18,7 +23,9 @@ class Character:
             if type_of_attack[1]:
                 result_attack = copy.deepcopy(self._general_attacks[type_of_attack[1]])
                 if type_of_attack[0]:
-                    result_attack["message"] = f"{DEFAULT_MOVE['message']} y {result_attack['message']}"
+                    result_attack[
+                        "message"
+                    ] = f"{DEFAULT_MOVE['message']} y {result_attack['message']}"
             else:
                 result_attack = DEFAULT_MOVE
 
@@ -31,5 +38,3 @@ class Character:
             self.life_point = 0
 
         return self.life_point
-
-

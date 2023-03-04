@@ -15,7 +15,12 @@ def get_message_final(player_1: Character, player_2: Character):
     return message_final
 
 
-def get_order_player(player_1: Character, player_2: Character, player_1_actions: tuple, player_2_actions: tuple) -> tuple:
+def get_order_player(
+    player_1: Character,
+    player_2: Character,
+    player_1_actions: tuple,
+    player_2_actions: tuple,
+) -> tuple:
 
     first_player_order = (player_1, player_2, player_1_actions, player_2_actions)
     second_player_order = (player_2, player_1, player_2_actions, player_1_actions)
@@ -45,4 +50,3 @@ def get_order_player(player_1: Character, player_2: Character, player_1_actions:
         return second_player_order
 
     return first_player_order
-

@@ -16,13 +16,18 @@ TEST_TYPE_OF_ATTACKS = {
 
 
 class TestCharacter:
-
     @pytest.mark.parametrize(
         ("type_of_attack", "expected"),
         (
-                (("DSS", "P"), {'damage': 3, 'message': 'usa un Taladoken', 'name': 'Taladoken'}),
-                (("", "P"), {'damage': 1, 'message': 'le da un puñetazo', 'name': 'Punch'}),
-                (("DDD", "P"), {'damage': 1, 'message': 'se mueve y le da un puñetazo', 'name': 'Punch'})
+            (
+                ("DSS", "P"),
+                {"damage": 3, "message": "usa un Taladoken", "name": "Taladoken"},
+            ),
+            (("", "P"), {"damage": 1, "message": "le da un puñetazo", "name": "Punch"}),
+            (
+                ("DDD", "P"),
+                {"damage": 1, "message": "se mueve y le da un puñetazo", "name": "Punch"},
+            ),
         ),
     )
     def test_attack(self, type_of_attack, expected):
@@ -44,4 +49,3 @@ class TestCharacter:
         expected = 0
         result = character.receive_damage(3)
         assert result == expected
-

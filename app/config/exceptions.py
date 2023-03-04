@@ -5,4 +5,7 @@ class ActionExceedCharacters(Exception):
         self.max_characters = max_characters
 
     def __str__(self):
-        return f"The {self.type_action} {self.value} exceeds {self.max_characters} character(s)"
+        return (
+            f"The {self.type_action} {self.value} "
+            f"exceeds {self.max_characters} character(s)"
+        )
