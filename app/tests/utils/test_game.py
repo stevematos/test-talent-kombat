@@ -18,7 +18,11 @@ TEST_TYPE_OF_ATTACKS = {
 
 @pytest.mark.parametrize(
     ("player_1_damage", "player_2_damage", "expected"),
-    ((6, 0, "Gano Steve"), (0, 7, "Gano Test"), (0, 0, "Empate")),
+    (
+        (6, 0, "Gano Steve con 7 punto(s) de vida"),
+        (0, 7, "Gano Test con 6 punto(s) de vida"),
+        (0, 0, "Empate"),
+    ),
 )
 def test_get_message_final(player_1_damage, player_2_damage, expected):
     player_1 = Character("Steve", 7, TEST_TYPE_OF_ATTACKS)

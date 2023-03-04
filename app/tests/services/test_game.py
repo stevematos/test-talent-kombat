@@ -42,7 +42,7 @@ TEST_TYPE_OF_ATTACKS = {
                 "Steve usa un Taladoken",
                 "Test le da un puñetazo",
                 "Steve usa un Taladoken",
-                "Gano Steve",
+                "Gano Steve con 5 punto(s) de vida",
             ],
         ),
         (
@@ -53,7 +53,7 @@ TEST_TYPE_OF_ATTACKS = {
                 "Test usa un Taladoken",
                 "Steve se mueve y le da un puñetazo",
                 "Test usa un Taladoken",
-                "Gano Test",
+                "Gano Test con 2 punto(s) de vida",
             ],
         ),
     ),

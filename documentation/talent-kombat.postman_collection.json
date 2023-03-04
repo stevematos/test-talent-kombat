@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"DSDDD\",\n                \"S\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"PP\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"\",\n                \"ASA\",\n                \"DA\",\n                \"AAA\",\n                \"\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\",\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\"\n            ]\n        }\n    }\n}",
+					"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"D\",\n                \"DSD\",\n                \"S\",\n                \"DSD\",\n                \"SD\"\n            ],\n            \"golpes\": [\n                \"K\",\n                \"P\",\n                \"\",\n                \"K\",\n                \"P\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"SA\",\n                \"SA\",\n                \"SA\",\n                \"ASA\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"K\",\n                \"\",\n                \"K\",\n                \"P\",\n                \"P\"\n            ]\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,7 +68,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve\",\n        \"Tonyn se mueve\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor usa un Taladoken\",\n        \"Gano Arnaldor\"\n    ]\n}"
+					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve\",\n        \"Tonyn se mueve\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor usa un Taladoken\",\n        \"Gano Arnaldor con 1 punto(s) de vida\"\n    ]\n}"
 				},
 				{
 					"name": "Example 2",
@@ -113,7 +113,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn usa un Taladoken\",\n        \"Gano Tonyn\"\n    ]\n}"
+					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn usa un Taladoken\",\n        \"Gano Tonyn con 3 punto(s) de vida\"\n    ]\n}"
 				},
 				{
 					"name": "Example 3",
@@ -151,7 +151,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"narration\": [\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor le da un puñetazo\",\n        \"Tonyn se mueve\",\n        \"Arnaldor se mueve\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Arnaldor le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Gano Arnaldor\"\n    ]\n}"
+					"body": "{\n    \"narration\": [\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor le da un puñetazo\",\n        \"Tonyn se mueve\",\n        \"Arnaldor se mueve\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Arnaldor le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Gano Arnaldor con 3 punto(s) de vida\"\n    ]\n}"
 				},
 				{
 					"name": "Error 1",

@@ -8,9 +8,9 @@ def get_message_final(player_1: Character, player_2: Character):
     if player_1.life_point > 0 and player_2.life_point > 0:
         message_final = "Empate"
     elif player_1.life_point == 0 and player_2.life_point > 0:
-        message_final = f"Gano {player_2.name}"
+        message_final = f"Gano {player_2.name} con {player_2.life_point} punto(s) de vida"
     elif player_1.life_point > 0 and player_2.life_point == 0:
-        message_final = f"Gano {player_1.name}"
+        message_final = f"Gano {player_1.name} con {player_1.life_point} punto(s) de vida"
 
     return message_final
 

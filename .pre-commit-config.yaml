@@ -50,4 +50,4 @@ repos:
           exclude: 'test_*.py|tests|example'
           args: [ -ll ]
 
-exclude: env
+exclude: documentation/|env/
