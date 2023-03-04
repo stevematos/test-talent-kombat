@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "fa01129a-cb80-49e7-a408-0bbaf053baab",
+		"name": "Talent Kombat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11433262"
+	},
+	"item": [
+		{
+			"name": "start game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"DSDDD\",\n                \"S\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"PP\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"\",\n                \"ASA\",\n                \"DA\",\n                \"AAA\",\n                \"\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\",\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\"\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/game/start",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"game",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"D\",\n                \"DSD\",\n                \"S\",\n                \"DSD\",\n                \"SD\"\n            ],\n            \"golpes\": [\n                \"K\",\n                \"P\",\n                \"\",\n                \"K\",\n                \"P\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"SA\",\n                \"SA\",\n                \"SA\",\n                \"ASA\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"K\",\n                \"\",\n                \"K\",\n                \"P\",\n                \"P\"\n            ]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/game/start",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve\",\n        \"Tonyn se mueve\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor usa un Taladoken\",\n        \"Gano Arnaldor\"\n    ]\n}"
+				},
+				{
+					"name": "Example 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"SDD\",\n                \"DSD\",\n                \"SA\",\n                \"DSD\"\n            ],\n            \"golpes\": [\n                \"K\",\n                \"P\",\n                \"K\",\n                \"P\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"DSD\",\n                \"WSAW\",\n                \"ASA\",\n                \"\",\n                \"ASA\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\",\n                \"P\",\n                \"k\"\n            ]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/game/start",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"narration\": [\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn se mueve y le da una patada\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Tonyn usa un Taladoken\",\n        \"Gano Tonyn\"\n    ]\n}"
+				},
+				{
+					"name": "Example 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"DSD\",\n                \"S\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"\",\n                \"ASA\",\n                \"DA\",\n                \"AAA\",\n                \"\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\",\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\"\n            ]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/game/start",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"narration\": [\n        \"Tonyn usa un Taladoken\",\n        \"Arnaldor le da un puñetazo\",\n        \"Tonyn se mueve\",\n        \"Arnaldor se mueve\",\n        \"Arnaldor se mueve y le da un puñetazo\",\n        \"Arnaldor se mueve y le da una patada\",\n        \"Arnaldor le da una patada\",\n        \"Arnaldor conecta un Remuyuken\",\n        \"Gano Arnaldor\"\n    ]\n}"
+				},
+				{
+					"name": "Error 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"DSDDD\",\n                \"S\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"PP\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"\",\n                \"ASA\",\n                \"DA\",\n                \"AAA\",\n                \"\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\",\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\"\n            ]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/game/start",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"The attack PP exceeds 1 character(s)\"\n}"
+				},
+				{
+					"name": "Error 1 Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player_actions\": {\n        \"player1\": {\n            \"movimientos\": [\n                \"DSDDDD\",\n                \"S\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"P\"\n            ]\n        },\n        \"player2\": {\n            \"movimientos\": [\n                \"\",\n                \"ASA\",\n                \"DA\",\n                \"AAA\",\n                \"\",\n                \"SA\"\n            ],\n            \"golpes\": [\n                \"P\",\n                \"\",\n                \"P\",\n                \"K\",\n                \"K\",\n                \"K\"\n            ]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/game/start",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"The move DSDDDD exceeds 5 character(s)\"\n}"
+				}
+			]
+		}
+	]
+}
