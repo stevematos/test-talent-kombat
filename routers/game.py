@@ -1,7 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, status
 
 from pydantic import BaseModel
 
+from config.exceptions import ActionExceedCharacters
 from services.game import start_game
 
 router = APIRouter()
@@ -13,5 +14,10 @@ class GamePlayers(BaseModel):
 
 @router.post("/start")
 async def start(game_players: GamePlayers):
-    messages = start_game(game_players.player_actions)
-    return {'narration': messages}
+    try:
+        messages = start_game(game_players.player_actions)
+        return {'narration': messages}
+    except ActionExceedCharacters as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=e.__str__())
+
+

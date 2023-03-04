@@ -1,7 +1,8 @@
 from config.constants import DEFAULT_POINTS_OF_LIFE, PLAYER_1_TYPE_OF_ATTACKS, PLAYER_2_TYPE_OF_ATTACKS
 from classes.character import Character
+from config.exceptions import ActionExceedCharacters
 from utils.game import get_message_final, get_order_player
-from utils.general import merge_list
+from utils.general import merge_list, get_value_exceed_max_characters
 
 
 def _execute_actions(
@@ -39,12 +40,26 @@ def _execute_actions(
     return history_messages
 
 
+def _verify_actions(player_actions: dict[str, list]):
+    movements = player_actions.get('movimientos', ())
+    attacks = player_actions.get('golpes', ())
+
+    if exceed_value := get_value_exceed_max_characters(movements, 5):
+        raise ActionExceedCharacters('move', exceed_value, 5)
+    if exceed_value := get_value_exceed_max_characters(attacks, 1):
+        raise ActionExceedCharacters('attack', exceed_value, 1)
+
+
 def start_game(player_actions: dict[str, dict[str, list]]) -> list[str]:
     player_1 = Character("Tonyn", DEFAULT_POINTS_OF_LIFE, PLAYER_1_TYPE_OF_ATTACKS)
     player_2 = Character("Arnaldor", DEFAULT_POINTS_OF_LIFE, PLAYER_2_TYPE_OF_ATTACKS)
 
     player_1_actions = player_actions.get('player1')
     player_2_actions = player_actions.get('player2')
+
+    # verify max characters in movements y hits
+    _verify_actions(player_1_actions)
+    _verify_actions(player_2_actions)
 
     player_1_tuple_actions = merge_list(player_1_actions.get('movimientos'), player_1_actions.get('golpes'))
     player_2_tuple_actions = merge_list(player_2_actions.get('movimientos'), player_2_actions.get('golpes'))

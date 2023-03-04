@@ -1,6 +1,7 @@
 import pytest
 from classes.character import Character
-from services.game import _execute_actions
+from config.exceptions import ActionExceedCharacters
+from services.game import _execute_actions, _verify_actions
 
 TEST_TYPE_OF_ATTACKS = {
     ("DSS", "P"): {
@@ -42,3 +43,42 @@ def test__execute_actions(first_player_actions, second_player_actions, expected)
 
     result = _execute_actions(first_player, second_player, first_player_actions, second_player_actions)
     assert result == expected
+
+
+@pytest.mark.parametrize(
+    ("player_actions", "raise_exception"),
+    (
+            (
+                {
+                    "movimientos": [
+                        "DSD",
+                        "S"
+                    ],
+                    "golpes": [
+                        "P",
+                        ""
+                    ]
+                },
+                None
+            ),
+            (
+                {
+                    "movimientos": [
+                        "DSD",
+                        "SSSSSS"
+                    ],
+                    "golpes": [
+                        "P",
+                        ""
+                    ]
+                },
+                ActionExceedCharacters
+            ),
+    ),
+)
+def test___verify_actions(player_actions, raise_exception):
+    if raise_exception:
+        with pytest.raises(raise_exception):
+            _verify_actions(player_actions)
+    else:
+        _verify_actions(player_actions)
